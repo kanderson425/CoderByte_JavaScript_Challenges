@@ -145,3 +145,15 @@ function LongestWord(sen) {
  }
  
  KaprekarsConstant(3524);
+
+ function addition(num) {
+    return num + 1;
+  }
+  
+  addition(9);
+
+  function farmProblem(chickens, cows, pigs) {
+    return (chickens * 2) + (cows * 4) + (pigs * 4);
+  }
+  
+  farmProblem(2,3,5);
