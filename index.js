@@ -158,4 +158,11 @@ function LongestWord(sen) {
   
   farmProblem(2,3,5);
 
-  //
+  function multiply(a, b){
+    return a * b;
+  }
+
+  function disemvowel(str) {
+    return str.replace(/[aeiouAEOIU]/g, "");
+    
+  }
