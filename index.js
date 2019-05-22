@@ -208,6 +208,26 @@ function disemvowel(str) {
    return newArray.join('');
   }
   
+  function duplicateCount(text) {
+  	let freq = {};
+    for (var i = 0; i < text.length; i++) {
+    	let character = text.toLowerCase().charAt(i);
+    	if (freq[character]) {
+    		freq[character]++;
+    	} else {
+				freq[character] = 1;
+			}
+    }
+		var count = 0;
+    for (const [key, value] of Object.entries(freq)) {
+/*     console.log(key, value); */
+    if (value > 1) {
+    	count ++;
+    }
+    }
+    return count;
+  }
+
 
 
 
