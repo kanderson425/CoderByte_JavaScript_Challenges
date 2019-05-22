@@ -186,3 +186,28 @@ function disemvowel(str) {
     }
     return count;
   }
+  function disemvowel(str) {
+    return str.replace(/[aeiouAEOIU]/g, "");
+    
+  }
+
+  function DNAStrand(dna) {
+    let dnaArray = dna.split('');
+    newArray = [];
+   dnaArray.forEach(function(letter) {
+     if(letter == 'A') {
+       newArray.push('T');
+     } else if(letter == 'T') {
+       newArray.push('A');
+     } else if(letter == 'C') {
+       newArray.push('G');
+     } else if(letter == 'G') {
+       newArray.push('C');
+     }
+   })
+   return newArray.join('');
+  }
+  
+
+
+
