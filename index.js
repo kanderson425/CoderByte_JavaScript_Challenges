@@ -228,6 +228,15 @@ function disemvowel(str) {
     return count;
   }
 
-
-
+  function toWeirdCase(string){
+    var res = [];
+    var k = 0;
+    
+    for (var i=0; i<string.length; i++){
+       res.push( k%2==0 ? string[i].toUpperCase(): string[i].toLowerCase() );
+       k++;
+       if (string[i] == ' ') k=0;
+    }
+    return res.join("");
+  }
 
