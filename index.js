@@ -228,6 +228,7 @@ function disemvowel(str) {
     return count;
   }
 
+<<<<<<< HEAD
   function toWeirdCase(string){
     var res = [];
     var k = 0;
@@ -239,4 +240,24 @@ function disemvowel(str) {
     }
     return res.join("");
   }
+=======
+  function isPrime(num) {
+    if (num<=1) {
+      return false;
+    } else if(num === 2) {
+      return true;
+    } else {
+      for(var x = 2; x < num; x++) {
+        if(num % x === 0) {
+          return false;
+        }
+      }
+      return true;  
+    }
+  }
+
+
+
+
+>>>>>>> 620f96959f292bbf3983d64b6ade54041230f06a
 
