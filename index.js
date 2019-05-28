@@ -228,7 +228,6 @@ function disemvowel(str) {
     return count;
   }
 
-<<<<<<< HEAD
   function toWeirdCase(string){
     var res = [];
     var k = 0;
@@ -240,24 +239,21 @@ function disemvowel(str) {
     }
     return res.join("");
   }
-=======
-  function isPrime(num) {
-    if (num<=1) {
-      return false;
-    } else if(num === 2) {
-      return true;
-    } else {
-      for(var x = 2; x < num; x++) {
-        if(num % x === 0) {
-          return false;
+
+  function pascalsTriangle(n) {
+    var arr = [];
+    for (var row = 0; row < n; row++) {
+      arr[row] = [];
+      for (var col = 0; col < row + 1; col++) {
+        if (col ===0 | col === row) {
+          arr[row][col] = 1;
+        } else {
+          arr[row][col] = arr[row-1][col-1] + arr[row-1][col];
         }
       }
-      return true;  
     }
+    var flatArr = arr.reduce(function(a, b) {
+      return a.concat(b);
+    });
+    return flatArr;
   }
-
-
-
-
->>>>>>> 620f96959f292bbf3983d64b6ade54041230f06a
-
