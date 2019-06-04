@@ -258,4 +258,24 @@ function disemvowel(str) {
     return flatArr;
   }
 
-  
+  //Count characters in your string
+  function count (string) {  
+    var strObj = {};
+    var strArr = string.split('');
+    strArr.map(function(element) {
+      if(strObj.hasOwnProperty(element)) {
+        strObj[element] = strObj[element] + 1;
+      } else {
+        strObj[element] = 1;
+        }
+      });
+     return strObj;
+  }
+
+  //Break Camel Case Strings - from CodeWars
+  function solution(string) {
+    let endStrArr = string.match(/[A-Z][a-z]+/g).join(' ');
+    let begStrArr = string.match(/[a-z]+/g)[0];
+    let sepString = begStrArr + " " + endStrArr;
+    return sepString;
+  }
