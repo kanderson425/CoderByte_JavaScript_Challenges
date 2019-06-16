@@ -279,3 +279,35 @@ function disemvowel(str) {
     let sepString = begStrArr + " " + endStrArr;
     return sepString;
   }
+
+  //Pick Peaks Function - from CodeWars
+  function pickPeaks(arr){
+  var obj = {pos:[],peaks:[]};
+  for (var i = 1; i < arr.length-1; i ++) {
+  	//if the current number is higher than previous and higher than the next one, it's the peak
+  	if (arr[i] > arr[i-1] && arr[i] > arr[i+1]){
+  		obj.pos.push(i);
+  		obj.peaks.push(arr[i]);
+  	//if current number is higher than the previous and equal to the next
+  	} else if (arr[i] > arr[i-1] && arr[i] === arr[i+1]) {
+	  	//save the position and value of this in a temporary variable
+	  	var temp = [];
+	  	temp.push(i);
+	  	temp.push(arr[i]);
+	  	console.log(temp);
+	  	//check the next one to see if it's higher than the one after, equal to the next one, or higher than the previous one
+	  	for (var j = i+1; j < arr.length-1; j++) {
+	  	//if it is higher than the next one, return the saved first repeating number
+	  	//3,3,4,5,3
+	  		if (arr[j] > arr[j+1]) {
+	  			obj.pos.push(temp[0]);
+	  			obj.peaks.push(temp[1]);
+	  			break;
+	  		} else if (arr[j] < arr[j+1]) {
+	  			//if the next one is higher, break out
+	  			break;
+	  		} 
+	  	}
+  	}
+  }
+  return obj;
